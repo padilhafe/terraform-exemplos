@@ -6,6 +6,7 @@ variable "tags" {}
 variable "clone" {}
 variable "ciuser" {}
 variable "cipassword" {}
+variable "sshkeys" {}
 
 # Configuracao de Hardware da Maquia
 variable "cpu_cores" {}

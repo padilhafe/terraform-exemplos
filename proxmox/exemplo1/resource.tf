@@ -3,7 +3,8 @@ resource "proxmox_vm_qemu" "vm" {
   description = var.description
   target_node = var.target_node
   tags        = var.tags
-  agent       = 1
+  agent       = 0
+  sshkeys     = var.sshkeys
 
   # Cloud Init Options
   clone       = var.clone
@@ -33,7 +34,7 @@ resource "proxmox_vm_qemu" "vm" {
     tag       = var.network0_tag
   }
   // ipconfig0 = "ip=${var.network0_ip}/${var.network0_subnet},gw=${var.network0_gateway}"
-  ipconfig0 = "dhcp"
+  ipconfig0 = "ip=dhcp"
 
   nameserver = var.nameserver
   searchdomain = var.searchdomain

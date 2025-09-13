@@ -5,6 +5,7 @@ target_node      = "pve"
 clone            = "debian-13"
 ciuser           = "ciuser"
 cipassword       = "cipass"
+sshkeys          = ""
 cpu_cores        = 2
 cpu_sockets      = 2
 memory           = 2048
